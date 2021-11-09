@@ -1,5 +1,38 @@
 body {
  background-color: rgb(251, 99, 99);
+}
 
+img {
+ width: 100%;
+}
+.title {
+ position: absolute;
+ z-index: 1001;
+ color: aquamarine;
+ top: 50px;
+ left: 100px;
+ font-size: 40px;
 
 }
+
+.bg {
+    width: 600px;
+    height: 400px;
+    position: relative;
+}
+
+.bg::before {
+ width: 600px;
+ height: 400px;
+ z-index: 100;
+ content: '';
+  position: absolute;
+  background-color: rgba(9, 9, 9, 0.585);
+  transition: all .3s ease;
+}
+
+.bg:hover::before{
+  background-color: rgba(23, 23, 23, 0);
+  cursor: pointer;
+}
+
