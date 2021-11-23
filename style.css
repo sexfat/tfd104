@@ -1,10 +1,6 @@
 body {
-    background-color: rgb(147, 252, 0);
-
+  padding: 2px;
+  margin: 10px;
 }
 
-h1 {
-    font-size: 30px;
-    color: #333;
-
-}
+/*# sourceMappingURL=style.css.map */
