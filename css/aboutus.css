@@ -1,0 +1,25 @@
+nav .menu {
+  list-style: none;
+}
+
+nav .menu li {
+  width: 100px;
+}
+
+nav .menu li a {
+  font-size: 16px;
+  color: #f20;
+}
+
+nav .menu li a:hover {
+  color: #cc1b00;
+}
+
+header {
+  width: 100%;
+}
+
+footer {
+  width: 100%;
+}
+/*# sourceMappingURL=aboutus.css.map */

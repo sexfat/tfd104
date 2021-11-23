@@ -1,5 +1,10 @@
 @import 'base/var';
 
+@import 'layout/header';
+@import 'layout/footer';
+@import 'aboutus';
+
+
 
 
 
@@ -98,25 +103,3 @@ $btn_size : large;
   }
 }
 
-nav {
-    width: 100%;
-
-    .menu {
-      list-style: none;
-
-      li {
-        width: 100px;
-
-        a {
-          font-size: $basic_fontsize;
-          color: $link;
-
-          &:hover {
-            color: darken($link, 10);
-          }
-
-        }
-
-      }
-    }
-}

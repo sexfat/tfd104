@@ -1,0 +1,20 @@
+nav {
+    .menu {
+      list-style: none;
+
+      li {
+        width: 100px;
+
+        a {
+          font-size: $basic_fontsize;
+          color: $link;
+
+          &:hover {
+            color: darken($link, 10);
+          }
+
+        }
+
+      }
+    }
+}
