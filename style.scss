@@ -63,5 +63,30 @@ $bgc : rgb(43, 69, 176);
 
 a:hover {
   color: darken($link , 20);
-
 }
+
+//運算 單位 跟 除式
+
+.op {
+ width:  10 + 12px;
+ height:  100 - 10px;
+ padding:  100px * 10; //單位
+ font-size: round(100 / 12) + px;
+}
+
+
+// 判斷式
+
+$btn_size : large;
+.btn_box {
+
+   @if $btn_size ==  'large' {
+     width: 200px;
+   }@else if $btn_size == 'medium' {
+     width:  180px;
+   }@else {
+     width:  150px;
+   }
+}
+ 
+

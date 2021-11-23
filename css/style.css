@@ -35,4 +35,15 @@ a {
 a:hover {
   color: #991400;
 }
+
+.op {
+  width: 22px;
+  height: 90px;
+  padding: 1000px;
+  font-size: 8px;
+}
+
+.btn_box {
+  width: 200px;
+}
 /*# sourceMappingURL=style.css.map */
