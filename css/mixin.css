@@ -51,4 +51,22 @@
   margin-right: auto;
   background-color: #fff7ba;
 }
+
+body {
+  color: #0091ff;
+}
+
+@media all and (min-width: 721px) and (max-width: 1024px) {
+  body {
+    font-size: 100px;
+    color: #f20;
+  }
+}
+
+@media all and (max-width: 720px) {
+  body {
+    font-size: 30px;
+    color: #ff9232;
+  }
+}
 /*# sourceMappingURL=mixin.css.map */

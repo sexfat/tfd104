@@ -1,3 +1,5 @@
+@import 'base/var';
+
 // 置中
 @mixin center-box() {
     margin-left: auto;
@@ -29,8 +31,6 @@
     }
 }
 
-
-
 @mixin rects($w, $h:$w) {
     width: $w;
     height: $h;
@@ -42,6 +42,21 @@
     align-items: center;
     @content;
 }
+
+@mixin m() {
+    @media all and (max-width: $m_breakpoint) {
+        @content;
+    }
+}
+
+@mixin t() {
+    @media all and (min-width:$t_breakpoint_min) and (max-width: $t_breakpoint_max) {
+        @content;
+    }
+}
+
+
+
 
 //===================
 
@@ -91,6 +106,26 @@
 @include layout('section1', 1200px) {
     background-color: #fff7ba;
 
+};
+
+
+body {
+  color: rgb(0, 145, 255)
 }
 
-;
+@include t() {
+    body {
+        font-size: 100px;
+        color: #f20;
+    }
+}
+
+
+
+@include m() {
+    body {
+        font-size: 30px;
+        color:rgb(255, 146, 50)
+    }
+}
+
