@@ -1,79 +1,96 @@
-
 // 置中
-@mixin center-box(){
-  margin-left: auto;
-  margin-right: auto;
+@mixin center-box() {
+    margin-left: auto;
+    margin-right: auto;
 }
 
-@mixin rect($w , $h:null) {
-    width:  $w;
-    height: $h; 
+@mixin rect($w, $h:null) {
+    width: $w;
+    height: $h;
 
 }
 
-@mixin layout($w){
-  @if $w == 1200px {
-     max-width: 1200px;
-     width: 100%;
-    @include center-box();
+@mixin layout($class, $w) {
+    .#{$class} {
+        @if $w==1200px {
+            max-width: 1200px;
+            width: 100%;
+            @include center-box();
+            @content;
 
-  }@else {
-     width: $w; 
-  }
+        }
+
+        @else {
+            width: $w;
+            @content;
+
+        }
+
+    }
 }
 
 
 
-@mixin rects($w , $h:$w) {
-    width:  $w;
+@mixin rects($w, $h:$w) {
+    width: $w;
     height: $h;
 }
 
 @mixin flexcenter() {
     display: flex;
     justify-content: center;
-    align-items: center;  
+    align-items: center;
+    @content;
 }
 
 //===================
 
 .box_center {
-  @include center-box();
-  @include rects(100px,80px);
-  background-color: #ff8c00;
+    @include center-box();
+    @include rects(100px, 80px);
+    background-color: #ff8c00;
 }
 
 .wrapper {
-  @include rect(1200px , 300px);
-  background-color: rgb(215, 215, 215);
-  @include center-box();
+    @include rect(1200px, 300px);
+    background-color: rgb(215, 215, 215);
+    @include center-box();
 }
 
 .wrapper_flex {
-   @include rect(1200px, 800px);
-   @include center-box();
-   @include flexcenter();
-   background-color: rgb(225, 225, 225);
-   .box1 {
-      @include rects(80px);
-      background-color: rgb(255, 146, 50);
-   }
+    @include rect(1200px, 800px);
+    @include center-box();
+
+    @include flexcenter() {
+        background-color: rgb(225, 225, 225);
+    }
+
+    ;
+
+    .box1 {
+        @include rects(80px);
+        background-color: rgb(255, 146, 50);
+    }
 }
 
-.wrapper_aboutus {
-  @include layout(1200px);
+@include layout('wrapper_aboutus', 1200px) {
+    background-color: #dcdcdc;
+
 }
 
-.section  {
- @include layout(100vw);
+;
 
-}  
+@include layout('section', 100vw) {
+    background-color: rgb(255, 176, 176);
 
+}
 
-
-
-
-
+;
 
 
+@include layout('section1', 1200px) {
+    background-color: #fff7ba;
 
+}
+
+;
