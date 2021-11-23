@@ -11,7 +11,7 @@
 }
 
 @mixin rects($w , $h:$w) {
-   width:  $w;
+    width:  $w;
     height: $h;
 }
 
