@@ -1,11 +1,11 @@
 $basic_fontsize : 16px; // 數值
 $margin :10px 10px 12px 13px; //list
-$color : rgb(51, 51, 51); // color
+$color : black; // color
 $fontFamily : "Gill Sans",
 sans-serif; //字串
 $padding : null; // 空值
 $img_path : 'assets/images'; // 字串轉型
-$layout : '.wrapper';
+$layout : '.con';
 $attr : 'padding';
 $btn-color :('primary' : #4d4d4d,
   'error' : #f20,
@@ -49,12 +49,12 @@ a {
 }
 
 
-$bgc : rgb(43, 69, 176);  
+$bgc : rgb(43, 69, 176);
 
 .link {
- width: 100px;
- padding: 0 10px;
- background-color: $bgc;
+  width: 100px;
+  padding: 0 10px;
+  background-color: $bgc;
 }
 
 .link:hover {
@@ -62,31 +62,76 @@ $bgc : rgb(43, 69, 176);
 }
 
 a:hover {
-  color: darken($link , 20);
+  color: darken($link, 20);
 }
 
 //運算 單位 跟 除式
 
 .op {
- width:  10 + 12px;
- height:  100 - 10px;
- padding:  100px * 10; //單位
- font-size: round(100 / 12) + px;
+  width: 10 + 12px;
+  height: 100 - 10px;
+  padding: 100px * 10; //單位
+  font-size: round(100 / 12) + px;
 }
 
 
 // 判斷式
 
 $btn_size : large;
+
 .btn_box {
+  @if $btn_size=='large' {
+    width: 200px;
+  }
 
-   @if $btn_size ==  'large' {
-     width: 200px;
-   }@else if $btn_size == 'medium' {
-     width:  180px;
-   }@else {
-     width:  150px;
-   }
+  @else if $btn_size=='medium' {
+    width: 180px;
+  }
+
+  @else {
+    width: 150px;
+  }
 }
- 
 
+.color {
+  @if $color=='black'and $color==#000 {
+    color: #000
+  }
+
+  @else {
+    color: $color;
+  }
+}
+
+.wrapper {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+
+  nav {
+    width: 100%;
+
+    ul {
+      list-style: none;
+
+      li {
+        width: 100px;
+
+        a {
+          font-size: $basic_fontsize;
+          color: $link;
+
+          &:hover {
+            color: darken($link, 10);
+          }
+
+        }
+
+      }
+    }
+  }
+
+  .content {
+    width: 100%;
+  }
+}
