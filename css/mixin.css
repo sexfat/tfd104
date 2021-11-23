@@ -6,6 +6,12 @@
   background-color: #ff8c00;
 }
 
+@media all and (max-width: 720px) {
+  .box_center {
+    background-color: #22ff00;
+  }
+}
+
 .wrapper {
   width: 1200px;
   height: 300px;

@@ -64,6 +64,9 @@
     @include center-box();
     @include rects(100px, 80px);
     background-color: #ff8c00;
+    @include m(){
+      background-color: rgb(34, 255, 0);
+    }
 }
 
 .wrapper {
