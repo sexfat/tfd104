@@ -1,4 +1,12 @@
+$basic_fontsize : 16px;// 數值
+$margin :10px 10px 12px 13px; //list
+$color : rgb(51, 51, 51); // color
+
+/* css 註解 */
+// scss 註解
 body {
-  padding: 2px;
-  margin: 10px;
+  font-size: $basic_fontsize;
+  padding: 0px;
+  margin: $margin;
+  color: $color;
 }
