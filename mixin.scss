@@ -36,7 +36,8 @@
 }
 
 .wrapper_flex {
-   @include rect(1200px, 300px);
+   @include rect(1200px, 800px);
+   @include center-box();
    @include flexcenter();
    background-color: rgb(225, 225, 225);
    .box1 {
