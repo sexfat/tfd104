@@ -3,7 +3,21 @@ $margin :10px 10px 12px 13px; //list
 $color : rgb(51, 51, 51); // color
 $fontFamily :  "Gill Sans", sans-serif; //字串
 $padding :  null;// 空值
-$img_path : 'images'; // 字串轉型
+$img_path : 'assets/images'; // 字串轉型
+$layout : '.wrapper'; 
+$attr : 'padding';
+$btn-color :(
+ 'primary' : #4d4d4d,
+ 'error' : #f20,
+);//map
+
+
+
+
+$a : 10px;
+$a : 30px !default;
+
+
 
 /* css 註解 */
 // scss 註解
@@ -15,3 +29,17 @@ body {
   font-family: $fontFamily;
   background-image: url('#{$img_path}/a.jpg'); //字串轉型
 }
+
+// class轉型
+#{$layout} {
+  width: 1200px;
+  #{$attr}: 0 auto;//屬性轉型
+}
+
+.btn {
+  background-color:map-get($btn-color, error) ; 
+  margin-top: $a;
+}
+
+
+

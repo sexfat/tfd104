@@ -5,6 +5,16 @@ body {
   margin: 10px 10px 12px 13px;
   color: #333333;
   font-family: "Gill Sans", sans-serif;
-  background-image: url("images/a.jpg");
+  background-image: url("assets/images/a.jpg");
+}
+
+.wrapper {
+  width: 1200px;
+  padding: 0 auto;
+}
+
+.btn {
+  background-color: #f20;
+  margin-top: 10px;
 }
 /*# sourceMappingURL=style.css.map */
