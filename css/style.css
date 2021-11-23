@@ -17,4 +17,22 @@ body {
   background-color: #f20;
   margin-top: 10px;
 }
+
+a {
+  color: #f20;
+}
+
+.link {
+  width: 100px;
+  padding: 0 10px;
+  background-color: #2b45b0;
+}
+
+.link:hover {
+  background-color: #677eda;
+}
+
+a:hover {
+  color: #991400;
+}
 /*# sourceMappingURL=style.css.map */
