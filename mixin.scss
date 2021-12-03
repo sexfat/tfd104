@@ -142,18 +142,25 @@ body {
     }
 }
 
-
-@mixin push($num , $dir) {
+// 調整物件 mixin
+@mixin push($num, $dir, $d:d) {
     @for $i from 1 through $num {
-        .push-#{$dir}-#{$i} {
+        .push-#{$d}-#{$dir}-#{$i} {
             position: relative;
             #{$dir}: $i * 1px;
         }
     }
 }
 
-@include push(200, right);
+// 桌機版
+@include push(200, left);
+@include push(200, top);
 
-
-
-
+// 手機版
+@include m() {
+    @include push(100, left, m);
+}
+// 平板
+@include t() {
+    @include push(100, left, t);
+}
