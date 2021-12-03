@@ -64,8 +64,9 @@
     @include center-box();
     @include rects(100px, 80px);
     background-color: #ff8c00;
-    @include m(){
-      background-color: rgb(34, 255, 0);
+
+    @include m() {
+        background-color: rgb(34, 255, 0);
     }
 }
 
@@ -109,11 +110,13 @@
 @include layout('section1', 1200px) {
     background-color: #fff7ba;
 
-};
+}
+
+;
 
 
 body {
-  color: rgb(0, 145, 255)
+    color: rgb(0, 145, 255)
 }
 
 @include t() {
@@ -128,7 +131,29 @@ body {
 @include m() {
     body {
         font-size: 30px;
-        color:rgb(255, 146, 50)
+        color: rgb(255, 146, 50)
     }
 }
+
+
+@for $i from 1 through 100 {
+    .box-#{$i} {
+        width: $i *1px;
+    }
+}
+
+
+@mixin push($num , $dir) {
+    @for $i from 1 through $num {
+        .push-#{$dir}-#{$i} {
+            position: relative;
+            #{$dir}: $i * 1px;
+        }
+    }
+}
+
+@include push(200, right);
+
+
+
 
