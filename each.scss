@@ -1,0 +1,23 @@
+@mixin images($val) {
+    @each $a in $val {
+        .img-#{$a} {
+            background-image: url('./assets/images/#{$a}.jpg');
+            @content;
+        }
+    }
+}
+
+@include images(a1 a2){
+   background-size: cover
+};
+
+@include images(logo){
+  width:  100px;
+  height: 200px;
+};
+
+@include images(banner){
+ width:  100%;
+ height: auto;
+ object-fit: cover;
+}
