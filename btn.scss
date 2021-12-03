@@ -1,0 +1,50 @@
+ @import 'base/reset';
+
+$btn_style:(
+   'primary' : #333,
+   'error' : #f20,
+   'warning' : #ddff00,
+
+);
+
+
+
+@mixin btn(){
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 0.375rem 0.75rem;
+}
+
+.btn {
+ @include btn();
+ border:  1px solid #333;
+ background-color: #e3e3e3;
+ &:hover {
+   background-color: rgb(184, 184, 184);
+ }
+ width: 100%;
+}
+
+
+@each $key , $val in $btn_style {
+   .#{$key}-btn {
+     background-color: $val;
+     transition: .3 all;
+     &:hover {
+       background-color: darken($val, 10);
+     }
+   }
+}
+
+
+
+

@@ -56,6 +56,28 @@
 }
 
 
+// css autoprefix 前綴字
+
+//前綴
+@mixin css3($property, $value) {
+
+    @each $prefix in '',
+    -webkit-,
+    -moz- ,
+    -ms- {
+        #{$prefix}#{$property}: $value;
+
+    }
+}
+
+div {
+    @include css3(transition, width 2s)
+}
+
+
+
+
+
 
 
 //===================

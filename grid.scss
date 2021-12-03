@@ -1,0 +1,63 @@
+ @import 'base/reset';
+
+
+// grid mixin
+
+@mixin grids($num, $w:null) {
+    @for $i from 1 through $num {
+        @if $w==null {
+            .col-#{$i} {
+                flex: 0 0 auto;
+                width: ($i / $num) *100%;
+                @content;
+            }
+        }
+
+        @else {
+            .col-#{$w}-#{$i} {
+                flex: 0 0 auto;
+                width: ($i / $num) *100%;
+                @content;
+            }
+
+        }
+    }
+
+}
+
+@mixin t() {
+    @media screen and (max-width: 996px) {
+        @content;
+    }
+}
+
+@mixin m() {
+    @media screen and (max-width: 576px) {
+        @content;
+    }
+}
+
+
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+
+    &>[class^="col-"] {
+        background-color: rgb(227, 227, 227);
+        border: 1px solid rgb(183, 183, 183);
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+
+    }
+}
+
+ @include grids(12);
+
+@include t(){
+    @include grids(12 , md);
+}
+
+@include m(){
+    @include grids(12 , sm);
+}

@@ -1,3 +1,10 @@
+div {
+  transition: width 2s;
+  -webkit-transition: width 2s;
+  -moz-transition: width 2s;
+  -ms-transition: width 2s;
+}
+
 .box_center {
   margin-left: auto;
   margin-right: auto;
