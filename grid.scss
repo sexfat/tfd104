@@ -1,0 +1,18 @@
+@import 'base/reset';
+
+.row {
+   display: flex;
+   flex-wrap: wrap;
+}
+
+// grid
+@mixin grid ($num) {
+    @for $i from 1 through $num {
+        .col-#{$i} {
+            flex: 0 0 auto;
+            width: ($i / $num) * 100%;
+        }
+    }
+}
+
+@include grid(12);

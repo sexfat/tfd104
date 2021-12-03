@@ -1,4 +1,5 @@
 @import 'base/var';
+@import 'push';
 
 // 置中
 @mixin center-box() {
@@ -164,3 +165,5 @@ body {
 @include t() {
     @include push(100, left, t);
 }
+
+
