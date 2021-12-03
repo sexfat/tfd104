@@ -9,7 +9,7 @@
 }
 
 .img-logo {
-  background-image: url("./assets/images/logo.jpg");
+  background-image: url("./assets/images/logo.gif");
   width: 100px;
   height: 200px;
 }
@@ -19,5 +19,25 @@
   width: 100%;
   height: auto;
   object-fit: cover;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 26px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 12px;
 }
 /*# sourceMappingURL=each.css.map */
