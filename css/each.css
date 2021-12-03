@@ -21,6 +21,18 @@
   object-fit: cover;
 }
 
+.primary {
+  color: #333;
+}
+
+.title2 {
+  color: #fba700;
+}
+
+.base {
+  color: #000;
+}
+
 h1 {
   font-size: 30px;
 }

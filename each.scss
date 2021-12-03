@@ -39,6 +39,20 @@ $title : ('h1' : 30px,
     'div' : 14px,
     ); //map
 
+
+$color : ('primary' : #333,
+    'title2' : #fba700,
+    'base' : #000,
+    ); //color map
+
+@each $key , $val in $color {
+  .#{$key} {
+      color: $val;
+  }
+
+}
+
+
 @mixin title($title) {
     @each $key,$val in $title {
         #{$key} {
