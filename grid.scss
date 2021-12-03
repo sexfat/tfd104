@@ -1,23 +1,64 @@
 @import 'base/reset';
+@import 'base/var';
+
 * {
- box-sizing: border-box;
+    box-sizing: border-box;
 }
 
+@mixin m() {
+    @media all and (max-width: $m_breakpoint) {
+        @content;
+    }
+}
+
+@mixin t() {
+    @media all and (min-width:$t_breakpoint_min) and (max-width: $t_breakpoint_max) {
+        @content;
+    }
+}
+
+
+
+//grid
+
 .row {
-   display: flex;
-   flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 // grid
-@mixin grid ($num) {
+@mixin grid ($num, $d : null) {
     @for $i from 1 through $num {
-        .col-#{$i} {
-            flex: 0 0 auto;
-            width: ($i / $num) * 100%;
-            background-color: rgb(243, 243, 243);
-            border: 1px solid rgb(156, 156, 156)
+        @if $d==null {
+            .col-#{$i} {
+                flex: 0 0 auto;
+                width: ($i / $num) * 100%;
+                background-color: rgb(243, 243, 243);
+                border: 1px solid rgb(156, 156, 156)
+            }
+        }
+
+        @else {
+            .col-#{$d}-#{$i} {
+                flex: 0 0 auto;
+                width: ($i / $num) * 100%;
+                background-color: rgb(243, 243, 243);
+                border: 1px solid rgb(156, 156, 156)
+            }
         }
     }
 }
 
-@include grid(12);
+ @include grid(12);
+
+
+// 平板
+@include t() {
+    @include grid(12, md);
+}
+
+
+//
+@include m() {
+    @include grid(12, sm);
+}
