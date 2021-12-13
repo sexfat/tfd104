@@ -1,9 +1,0 @@
-// 調整物件 mixin
-@mixin push($num, $dir, $d:d) {
-    @for $i from 1 through $num {
-        .push-#{$d}-#{$dir}-#{$i} {
-            position: relative;
-            #{$dir}: $i * 1px;
-        }
-    }
-}
