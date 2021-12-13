@@ -25,9 +25,9 @@ exports.copy = move;
 // sass編譯
 const sass = require('gulp-sass')(require('sass'));
 function sassstyle(){
-   return src('sass/style.scss')
+   return src('src/sass/*.scss') // 來源路徑
    .pipe(sass().on('error', sass.logError))
-   .pipe(dest('css/'))
+   .pipe(dest('dist/css/')) // 目的地路徑
 }
 
 exports.style =sassstyle;
@@ -37,12 +37,12 @@ exports.style =sassstyle;
 const fileinclude = require('gulp-file-include');
 
 function html(){
-   return src('html/*.html')
+   return src('src/*.html') // 來源路徑
    .pipe(fileinclude({
     prefix: '@@',
     basepath: '@file'
      }))
-   .pipe(dest('./'));
+   .pipe(dest('./dist')); // 目的地路徑
 }
 
 exports.template = html;
