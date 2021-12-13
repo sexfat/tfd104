@@ -74,6 +74,12 @@ function min_images(){
 exports.img = min_images;
 
 
+function img_copy(){
+  return src('src/images/*.*').pipe(dest('dist/images'))
+}
+
+
+
 
 
 
@@ -110,6 +116,6 @@ function browser(done) {
      done();
 }
 
-exports.default = browser;
+exports.default = series(browser , img_copy) ;
 
 
