@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "安裝套件": "npm install"
+    "安裝套件": "npm install",
+    "執行sass打包" : "gulp style"
   },
   "keywords": [],
   "author": "",
