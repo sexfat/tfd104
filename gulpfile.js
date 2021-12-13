@@ -47,6 +47,20 @@ function html(){
 
 exports.template = html;
 
+// js uglify
+
+const uglify = require('gulp-uglify');
+
+function jsmini(){
+   return src('src/js/*.js')
+   .pipe(uglify())
+   .pipe(dest('dist/js'))
+}
+
+exports.js =jsmini;
+
+
+
 // watch
 function watchall(){
    watch(['html/*.html' , 'html/**/*.html'] , html);
