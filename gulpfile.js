@@ -63,8 +63,9 @@ exports.js =jsmini;
 
 // watch
 function watchall(){
-   watch(['html/*.html' , 'html/**/*.html'] , html);
-   watch(['sass/*.scss' , 'sass/**/*.scss'] , sassstyle)
+   watch(['src/*.html' , 'src/layout/*.html'] , html);
+   watch(['src/sass/*.scss' , 'src/sass/**/*.scss'] , sassstyle)
+   watch('src/js/*.js' , jsmini)
 }
 
 exports.w = watchall;

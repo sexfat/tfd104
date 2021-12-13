@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "安裝套件": "npm install",
-    "執行sass打包": "gulp style"
+    "執行sass打包": "gulp style",
+    "監看開發" : "gulp w"
   },
   "keywords": [],
   "author": "",
