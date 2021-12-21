@@ -128,7 +128,7 @@ var concat = require('gulp-concat');
 
 function concatcss(){
     return src('./dist/css/*.css')
-    .pipe(concat('all.css'))
+    .pipe(concat('all.css'))// 整合檔案名稱
     .pipe(dest('dist/css/all'))
 }
 
@@ -136,7 +136,7 @@ exports.all  = concatcss;
 
 
 
-
+//  開發
 
 const browserSync = require('browser-sync');
 const reload = browserSync.reload;
@@ -157,5 +157,14 @@ function browser(done) {
 }
 
 exports.default = series(browser , img_copy);
+
+
+// 打包
+
+sassstyle  / html / jsmini /min_images
+
+exports.packages = series(clear , parallel( sassstyle , html , jsmini) , min_images);
+
+
 
 

@@ -8,7 +8,8 @@
     "執行sass打包": "gulp style",
     "壓圖": "gulp img",
     "清除舊檔案": "gulp c",
-    "開發": "gulp"
+    "開發": "gulp",
+    "打包上線": "gulp packages"
   },
   "keywords": [],
   "author": "",
