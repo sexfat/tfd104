@@ -1,4 +1,4 @@
-console.log('webpack ok');
+console.log('app ok');
 
 
 
@@ -18,9 +18,9 @@ gsap.to('.box' , {
   y: 100,
   rotation : 180,
   backgroundColor : 'red'
-
-
 })
 
+
+// import Vue from 'vue';
 
 
