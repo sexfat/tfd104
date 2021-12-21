@@ -25,11 +25,14 @@ exports.copy = move;
 // sass編譯
 const sass = require('gulp-sass')(require('sass'));
 const autoprefixer = require('gulp-autoprefixer');
+const sourcemaps = require('gulp-sourcemaps');
 
 function sassstyle(){
    return src('src/sass/*.scss') // 來源路徑
+  .pipe(sourcemaps.init())
    .pipe(sass().on('error', sass.logError))
-    .pipe(autoprefixer({
+  .pipe(sourcemaps.write())
+   .pipe(autoprefixer({
             cascade: false
         })) // 解決 css 跨瀏覽器問題
    .pipe(dest('dist/css/')) // 目的地路徑
@@ -53,10 +56,8 @@ function html(){
 exports.template = html;
 
 // js uglify
-
 const uglify = require('gulp-uglify');
-
-
+// js es6 -> es5
 const babel = require('gulp-babel');
 
 
