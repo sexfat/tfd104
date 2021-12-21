@@ -1,6 +1,6 @@
 @import 'base/var';
 @import 'mixin/mixin';
-@import './../../node_modules/bootstrap/scss/bootstrap.scss';
+
 @import './module/btn';
 @import 'layout/header';
 @import 'layout/footer';
@@ -15,4 +15,5 @@
    display: flex;
    align-items: center;
 }
+
  
