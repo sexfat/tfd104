@@ -161,7 +161,7 @@ exports.default = series(browser , img_copy);
 
 // 打包
 
-sassstyle  / html / jsmini /min_images
+// sassstyle  / html / jsmini /min_images
 
 exports.packages = series(clear , parallel( sassstyle , html , jsmini) , min_images);
 
