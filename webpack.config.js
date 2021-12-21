@@ -2,10 +2,13 @@ const path = require('path');
 
 
 module.exports = {
-    entry: ['./src/app.js' , './src/app2.js'],               // 入口文件
+    entry: {
+      app1 : './src/app.js' ,
+      app2 :  './src/app2.js'
+    }, // 入口文件
     output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: '[name].js'
     },               // 出口文件
    // module: {},              // 處裡對應模組
    // plugins: [],             // 對應的插件
