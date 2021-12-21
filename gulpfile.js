@@ -122,6 +122,19 @@ function clear() {
 exports.c = clear
 
 
+// 整合檔案
+
+var concat = require('gulp-concat');
+
+function concatcss(){
+    return src('./dist/css/*.css')
+    .pipe(concat('all.css'))
+    .pipe(dest('dist/css/all'))
+}
+
+exports.all  = concatcss;
+
+
 
 
 
