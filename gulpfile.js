@@ -24,9 +24,14 @@ exports.copy = move;
 
 // sass編譯
 const sass = require('gulp-sass')(require('sass'));
+const autoprefixer = require('gulp-autoprefixer');
+
 function sassstyle(){
    return src('src/sass/*.scss') // 來源路徑
    .pipe(sass().on('error', sass.logError))
+    .pipe(autoprefixer({
+            cascade: false
+        }))
    .pipe(dest('dist/css/')) // 目的地路徑
 }
 

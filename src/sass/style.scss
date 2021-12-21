@@ -6,4 +6,10 @@
 @import 'layout/content';
 @import 'page/index';
 @import 'page/aboutus';
+
+
+.test {
+   transition: all .5s;
+   user-select: none;
+}
  
