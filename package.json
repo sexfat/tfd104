@@ -7,6 +7,7 @@
     "安裝套件": "npm install",
     "執行sass打包": "gulp style",
     "壓圖": "gulp img",
+    "清除舊檔案" : "gulp c" ,
     "開發": "gulp"
   },
   "keywords": [],
@@ -19,6 +20,7 @@
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-babel": "^8.0.0",
+    "gulp-clean": "^0.4.0",
     "gulp-file-include": "^2.3.0",
     "gulp-imagemin": "^7.1.0",
     "gulp-sass": "^5.0.0",

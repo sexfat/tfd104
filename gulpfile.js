@@ -111,6 +111,17 @@ function watchall(){
 exports.w = watchall;
 
 
+// 刪除舊檔案
+const clean = require('gulp-clean');
+
+function clear() {
+  return src('dist' ,{ read: false ,allowEmpty: true })//不去讀檔案結構，增加刪除效率  / allowEmpty : 允許刪除空的檔案
+  .pipe(clean({force: true})); //強制刪除檔案 
+}
+
+exports.c = clear
+
+
 
 
 
