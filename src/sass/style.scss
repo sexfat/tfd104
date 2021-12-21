@@ -11,5 +11,7 @@
 .test {
    transition: all .5s;
    user-select: none;
+   display: flex;
+   align-items: center;
 }
  

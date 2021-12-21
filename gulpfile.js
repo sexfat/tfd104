@@ -31,7 +31,7 @@ function sassstyle(){
    .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
             cascade: false
-        }))
+        })) // 解決 css 跨瀏覽器問題
    .pipe(dest('dist/css/')) // 目的地路徑
 }
 
@@ -56,9 +56,19 @@ exports.template = html;
 
 const uglify = require('gulp-uglify');
 
+
+const babel = require('gulp-babel');
+
+
+
+
+
 function jsmini(){
    return src('src/js/*.js')
-   .pipe(uglify())
+   .pipe(babel({
+            presets: ['@babel/env']
+        }))// es6 -> es5
+   .pipe(uglify()) // minify js
    .pipe(dest('dist/js'))
 }
 
@@ -121,6 +131,6 @@ function browser(done) {
      done();
 }
 
-exports.default = series(browser , img_copy) ;
+exports.default = series(browser , img_copy);
 
 
