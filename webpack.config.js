@@ -17,21 +17,37 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].js'
     },               // 出口文件
-    module: {
+     module: {
         rules: [{
             // 格式
             test: /\.(sass|scss|css)$/,
-            //順序是由下到上 sass > css > style
+            //順序是由下到上 css > style
             use: [{
-                loader: MiniCssExtractPlugin.loader,
-                options: {
-                  publicPath: './dist'
-                }
-              },
+                    loader: MiniCssExtractPlugin.loader,
+                    options: {
+                      publicPath: './dist'
+                    }
+                  },
+                // 'style-loader',//跟MiniCssExtractPlugin 會衝突所以要關掉
                 'css-loader',
                 'sass-loader'
             ],
-        }]
+        },
+        //babel loader
+        {
+            test: /\.(js)$/,
+            exclude: /(node_modules)/,
+
+            use: [{
+                loader: 'babel-loader',
+                options: {
+                    presets: ['@babel/preset-env']
+                }
+            }],
+            include: path.resolve(__dirname, 'src'),
+        },
+
+      ]
 
     },          // 處裡對應模組
     plugins: [
@@ -64,5 +80,5 @@ module.exports = {
         index: 'index.html',
         open: true
     },         // 服務器配置
-   //mode: 'development'      // 開發模式配置
+     mode: 'development'      // 開發模式配置
 }
