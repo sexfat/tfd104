@@ -11,6 +11,14 @@ import './sass/main.scss';
 $('body').css('background-color' , 'red');
 
 import Vue from 'vue'; 
+
+var app = new Vue({
+  el : '#app',
+  data : {
+    message : 'hi vue'
+  }
+
+})
 // //  gsap  import
 // import {gsap} from 'gsap';
 // gsap.to('.box' , {
