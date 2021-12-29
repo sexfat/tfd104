@@ -1,0 +1,11 @@
+@import 'base/var';
+
+
+body {
+ margin: 10px;
+ background-color: $basicolor;
+ font-size: $fontSize;
+   h1 {
+     font-size: 30px;
+   }
+}

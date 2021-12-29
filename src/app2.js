@@ -1,4 +1,4 @@
 console.log('app2');
 
-import './main.scss';
-import './main2.scss';
+import './sass/main.scss';
+import './sass/main2.scss';
