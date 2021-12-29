@@ -3,7 +3,9 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const {
     CleanWebpackPlugin
-} = require('clean-webpack-plugin')
+} = require('clean-webpack-plugin');
+
+const webpack  = require('webpack');
 
 
 
@@ -70,7 +72,11 @@ module.exports = {
             //來源
             filename : 'about.html'
             // 目的地
-        })
+        }),
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery'
+          })
     ],               // 對應的插件
     devServer: {
         contentBase: './dist',
@@ -80,5 +86,10 @@ module.exports = {
         index: 'index.html',
         open: true
     },         // 服務器配置
+    resolve: {
+        alias: {
+           vue: 'vue/dist/vue.js'
+        }
+      },
      mode: 'development'      // 開發模式配置
 }

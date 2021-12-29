@@ -8,9 +8,9 @@ import './sass/main.scss';
 
 // // jquery import
 // import $ from 'jquery';
-// $('body').css('background-color' , 'yellow');
+$('body').css('background-color' , 'red');
 
-
+import Vue from 'vue'; 
 // //  gsap  import
 // import {gsap} from 'gsap';
 // gsap.to('.box' , {
