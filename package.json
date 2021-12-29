@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "開發": "webpack -w"
+    "開發": "webpack -w",
+    "devserver": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
@@ -17,13 +18,15 @@
   },
   "homepage": "https://github.com/sexfat/tfd104#readme",
   "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^5.2.4",
     "html-webpack-plugin": "^4.5.0",
     "mini-css-extract-plugin": "^1.6.0",
     "node-sass": "^5.0.0",
     "sass-loader": "^10.1.1",
     "style-loader": "^2.0.0",
-    "webpack": "^4.43.0"
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12"
   },
   "dependencies": {
     "gsap": "^3.9.0",
