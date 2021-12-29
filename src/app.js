@@ -1,6 +1,6 @@
 console.log('app ok');
 
-
+import './sass/main.scss';
 
 const x = (x , y) => x * y ;
 document.getElementById('app').innerHTML = x(10 , 30)
